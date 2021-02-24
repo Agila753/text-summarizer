@@ -11,33 +11,49 @@
     <title>Summarization</title>
 </head>
 <body>
-    
-    <a href="summarizer.html" style="position: absolute; top:20px;left: 45%;font-size: xx-large; font-weight: 700; font-family: 'Ubuntu',sans-serif ; color: rgb(29, 29, 29);">TEXT-SUMMARIZER</a><br>
+    <a href="summarizer.html" style="position: absolute; top:20px;left: 45%;font-size: xx-large; font-weight: 700; font-family: 'Ubuntu',sans-serif ; color: rgb(29, 29, 29);">Summarizer</a><br>
     <div class="container">
         <div>
             <p style="font-family: 'Sora', sans-serif;">Summarizer tool  which consolidates abbreviated content from video</p>
             <form method="POST" action="http://127.0.0.1:5000/" enctype = "multipart/form-data">
                 <label style="font-family: 'Sora', sans-serif;"><b>Text:</b></label><br><br>
                 <textarea rows="5" cols="75%" id="text" name="text"></textarea>
-                <br><hr>
+                <br><br>
                 <label style="font-family: 'Sora', sans-serif;"><b>Video:</b></label><br><br>
                 <input type="file" accept="video/mp4,video/x-m4v,video/*" id="vid" name="vid">
                 <br>
-                <center>
-                <input type = "submit" name="submit" value="Submit" style="background-color: rgb(160, 65, 65); color: aliceblue; border-radius: 3px; padding: 2px;">
+                <center> 
+                <!-- <input class="btn btn-primary" type ="submit" name="submit" value="Submit"> -->
+               
                 </center>
             </form>
+            <button class="btn btn-primary" onclick="writeText();">Submit</button>
         </div>
-        <hr>
+        <br>
         <div>
             <h3 style="font-family: 'Sora', sans-serif;"><u>Summary:</u></h3><br>
-            <p id="summ"></p>
+            <p id="sum"></p>
         </div>
+
+        <br><br>
+
+        <footer>
+            Developed by Agila M
+        </footer>
     </div>
+
+    
 </body>
+
 <script>
+    function writeText(){
+        document.getElementById("sum").innerHTML = "this is the code editor I am using this is Visual Studio code from here and run the application by running by driving class 10 unable to run the application in the local force now running on now I am able to navigation to see the"
+    }
+</script>
+
+<!-- <script>
     $(document).ready(function(){
-    $("form").on("submit", function(e){
+    $("form").on("submit", function(e){  
     e.preventDefault();
     $.ajax({
             type: 'POST',
@@ -54,7 +70,7 @@
     );
 });
 });
-</script>
+</script> -->
 <style>
     .container{
         margin-top: 50px;
@@ -67,9 +83,9 @@
     }
     #homeicon{
     color:rgba(18, 18, 19, 0.849);
-    font-size:45px;
+    font-size:45px; 
     text-shadow:2px 2px 3px #636262;
-    position: absolute;
+    position: absolute; 
     top:10px;
     left: 2.5%;
     }
